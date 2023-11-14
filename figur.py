@@ -9,3 +9,4 @@ class Figur():
     def tegn(self, bakgrunn: pygame.Surface):
         bakgrunn.blit(self.bilde, self.ramme)
 
+    

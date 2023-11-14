@@ -79,6 +79,8 @@ while True:
         dino_y_fart += gtravitasjon
         dino_y += dino_y_fart
     
+
+    
     if taster[pygame.K_DOWN]:
         dino_bilde = dinodukk_bilde1
         

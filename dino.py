@@ -2,17 +2,24 @@
 from figur import Figur
 
 class Dino(Figur):
-    def __init__(self, bildesti: str, gravitasjon: int, hopp: str) -> None:
+    def __init__(self, bildesti: str) -> None:
         super().__init__("bilder/dino1.png")
-        self.gravitasjon = gravitasjon
-        self.hopp = hopp
+        self.fart = 1
+        self.akselerasjon = 0.2
 
     
     def gravitasjon(self):
-        self.gravitasjon = 0.1
-
+        self.fart += self.akselerasjon
+        
 
     def hopp(self):
-        self.hopp
+        self.fart = -5
+        
+    def beveg(self):
+        self.gravitasjon()
+        self.ramme.y += self.fart
+        if self.ramme.bottom > 530:
+            self.fart = 0
+        
     
     

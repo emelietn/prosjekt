@@ -12,8 +12,9 @@ klokke = pygame.time.Clock()
 
 #dino
 dino = Dino("bilder/dino1.png")
-dino.ramme.top = 405
-
+dino.ramme.top = 300
+hindring = Hindring("bilder(tre1.png)")
+hindring.ramme.bottom = 500
 
 #bakgrunn
 bakgrunn_x = 0
@@ -31,21 +32,32 @@ while True:
             pygame.quit()
             raise SystemExit
         
+    taster = pygame.key.get_pressed()
+
+    if taster[pygame.K_UP]:
+        dino.hopp()
+
+        
     #bagrunnen
     bakgrunn_x -=1
     if bakgrunn_x < -200:
         bakgrunn_x = 0
 
 
-    taster = pygame.key.get_pressed()
 
     #3 oppdater spill
+
+    dino.beveg()
+
+    
+    
 
     #4 tegn
 
     vindu.fill("white")
     vindu.blit(bakgrunn_bilde, (bakgrunn_x, bakgrunn_y))
     dino.tegn(vindu)
+    hindring.tegn(vindu)
     
 
     pygame.display.flip()
