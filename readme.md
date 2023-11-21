@@ -6,5 +6,5 @@ Todo:
 
 - [x] skisse
 - [x] klasse
-- [ ] bevegelser
-- [ ] dø
+- [x] bevegelser
+- [x] kollisjon

@@ -10,3 +10,4 @@ class Figur():
         bakgrunn.blit(self.bilde, self.ramme)
 
     
+    

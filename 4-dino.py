@@ -96,6 +96,8 @@ while True:
     if kaktus_rect.right < 0:
         if kaktus_surface == kaktus2:
             kaktus_surface = kaktus1
+
+            
         elif kaktus_surface == kaktus1:
             kaktus_surface = kaktus2
         kaktus_rect.left = BREDDE
